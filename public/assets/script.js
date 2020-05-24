@@ -7,14 +7,20 @@ $(function(){
             details: $('#burgerDetails').val().trim(),
         };
         
+        if(newBurger.burger == ""){
+            alert("Enter Burger Name.");
+        }else if(newBurger.details ==""){
+            alert("Enter Details for Burger.")
+        }else{
+            $.ajax("/api/burger", {
+                type: "POST",
+                data: newBurger
+            }).then(function(){
+                console.log("New Burger Added.")
+                location.reload();
+            })            
+        }
     
-        $.ajax("/api/burger", {
-            type: "POST",
-            data: newBurger
-        }).then(function(){
-            console.log("New Burger Added.")
-            location.reload();
-        })
     });
     //To Eat
 	$(".devourButton").on("click", function (event) {
@@ -47,6 +53,19 @@ $(function(){
 			// Reload the page
 			location.reload();
 		});
-	});
+    });
+    
+        //To Remove
+        $(".removeButton").on("click", function (event) {
+            const id = $(this).data("id");
+            // Send the PUT request
+            $.ajax("/api/burgers/" + id, {
+                type: "DELETE",
+            }).then(() => {
+                console.log("Burger Deleted.");
+                // Reload the page
+                location.reload();
+            });
+        });
 })
 

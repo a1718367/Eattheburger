@@ -1,45 +1,53 @@
 <div class="container">
-<div class="row">
-<h1>Fantasy Burger</h1>
-</div>
-<div class="row">
+	<div class="row mt-3">
+	<h1 class="wfont">Fantasy Burger</h1>
+	</div>
+
+<div class="row mt-3 mx-2">
+
+
     <div class="col-4">
-        <h2>On Offer</h2>
+        <h2 class="wfont" id="offer">On Offer</h2>
         {{#each burger}}
 		{{#unless this.devoured}}
-		<div class="card">
+		<div class="card" id="offercard">
 			<div class="card-body">
-				<p class="text-primary">{{this.burger_name}}</p>
+				<p>{{this.burger_name}}</p>
                 <p>{{this.burger_details}}</p>
-				<button class="devourButton d-flex ml-auto" data-id="{{this.id}}" class="devourButton">Devour It!</button>
+				<button class="devourButton d-flex ml-auto btn btn-danger" data-id="{{this.id}}">Devour!!</button>
 				</div>
 			</div>
 			{{/unless}}
 			{{/each}}
     </div>
 
-    <div class="col-4">
-    <h2>Add burger</h2>
+    <div class="col-4" id="add">
+    <h2 class="wfont">Add burger</h2>
 
-    <form id="newBurger">
+    <form class="m-1"id="newBurger">
     <p>Burger Name</p>
     <input type="text" class="form-control mb-2" name="burgerName" id="burgerName"></input>
     <p>Details</p>
     <textarea type="text" class="form-control mb-2" name="burgerName" id="burgerDetails"></textarea>
-    <button class="d-flex ml-auto" type="submit">Add Burger</button>
-    </form>        
+    <button class="d-flex ml-auto addbutton btn btn-primary" type="submit">Add Burger</button>
+    </form>
+	
 
     </div>
 
 		<div class="col-4">
-			<h3>Taken by Someone</h3>
+			<h2 class="wfont">Taken by Someone</h2>
 			{{#each burger}}
 			{{#if this.devoured}}
-			<div class="card m-1">
+			<div class="card m-1" id="taken">
 				<div class="card-body p-2">
-				<p class="text-secondary">{{this.burger_name}}</p>
+				<p>{{this.burger_name}}</p>
                 <p>{{this.burger_details}}</p>
-					<button class="returnButton d-flex ml-auto" data-id="{{this.id}}" class="returnButton">Return</button>
+				<div class="d-inline" id="btn">
+					<button class="returnButton d-inline btn btn-success" data-id="{{this.id}}">Return</button>
+					<button class="removeButton d-inline btn btn-success" data-id="{{this.id}}">Remove</button>
+				</div>
+
 				</div>
 			</div>
 			{{/if}}

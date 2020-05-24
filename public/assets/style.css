@@ -1,0 +1,24 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: whitesmoke;
+}
+body{
+    background: url(../img/bgwood.png) no-repeat center fixed;
+    background-size: cover;
+    
+}
+
+#offercard{
+    background-color: rgba(3, 179, 3, 0.842);
+}
+
+#add{
+    background: url(../img/burgerjump.png) no-repeat;
+    background-size: cover;
+    height: 45em;
+}
+
+#taken {
+    background-color: rgba(233, 18, 18, 0.521)
+}
+

@@ -19,13 +19,21 @@ const orm = {
         })
     },
 
-	updateone(table, id, col, val, cb) {
+	updateone: function(table, id, col, val, cb) {
 		const query = "UPDATE ?? SET ??=? WHERE id=?";
 		connection.query(query, [table, col, val, id], (err, result) => {
 			if (err) throw err;
 			cb(result);
 		});
-	},
+    },
+    
+    delete(table,id,cb){
+        const query = "DELETE FROM ?? WHERE id=?";
+        connection.query(query,[table,id],(err,result) => {
+            if (err) throw err;
+            cb(result)
+        })
+    }
 
 };
 
