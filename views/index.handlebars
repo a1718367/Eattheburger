@@ -7,7 +7,7 @@
 
 
     <div class="col-4">
-        <h2 class="wfont" id="offer">On Offer</h2>
+        <h2 id="offer">On Offer</h2>
         {{#each burger}}
 		{{#unless this.devoured}}
 		<div class="card" id="offercard">
@@ -22,7 +22,7 @@
     </div>
 
     <div class="col-4" id="add">
-    <h2 class="wfont">Add burger</h2>
+    <h2>Add Burger</h2>
 
     <form class="m-1"id="newBurger">
     <p>Burger Name</p>
@@ -36,7 +36,7 @@
     </div>
 
 		<div class="col-4">
-			<h2 class="wfont">Taken by Someone</h2>
+			<h2>Taken by Someone</h2>
 			{{#each burger}}
 			{{#if this.devoured}}
 			<div class="card m-1" id="taken">

@@ -1,4 +1,4 @@
 use burgerdb1;
-INSERT INTO burgers (burger_name, burger_details) VALUES ('Portland Hipster', 'Beyond Burger with organic bacon, pickled onions, avocados and house-made aoili');
-INSERT INTO burgers (burger_name, burger_details) VALUES ('All-American','1lb beef burger with american cheese, lettuce, onions, dill pickles, and ketchup');
-INSERT INTO burgers (burger_name, burger_details) VALUES ('L.A. Gourmet','Kobe steak with Maine lobster, caramelized onions, brie, crispy prosciutto, and aged balsamic vinegar');
+INSERT INTO burgers (burger_name, burger_details) VALUES ('The Mighty', 'Grass-fed beef pattie with crispy bacon, free-range egg, tasty cheese, beetroot, cos lettuce, tomato, Spanish onion, relish & herbed mayo.');
+INSERT INTO burgers (burger_name, burger_details) VALUES ("Simply Grill'd",'Grass-fed beef pattie with cos lettuce, tomato, Spanish onion, relish & herbed mayo.');
+INSERT INTO burgers (burger_name, burger_details) VALUES ('Beyond Garden Goodness','Plant-based, meat tasting Beyond Meat pattie with tasty cheese, avocado, beetroot, cos lettuce, tomato, Spanish onion, relish & herbed mayo.');
