@@ -1,0 +1,54 @@
+<div class="container">
+<div class="row">
+<h1>Fantasy Burger</h1>
+</div>
+<div class="row">
+    <div class="col-4">
+        <h2>On Offer</h2>
+        {{#each burger}}
+		{{#unless this.devoured}}
+		<div class="card">
+			<div class="card-body">
+				<p class="text-primary">{{this.burger_name}}</p>
+                <p>{{this.burger_details}}</p>
+				<button class="devourButton d-flex ml-auto" data-id="{{this.id}}" class="devourButton">Devour It!</button>
+				</div>
+			</div>
+			{{/unless}}
+			{{/each}}
+    </div>
+
+    <div class="col-4">
+    <h2>Add burger</h2>
+
+    <form id="newBurger">
+    <p>Burger Name</p>
+    <input type="text" class="form-control mb-2" name="burgerName" id="burgerName"></input>
+    <p>Details</p>
+    <textarea type="text" class="form-control mb-2" name="burgerName" id="burgerDetails"></textarea>
+    <button class="d-flex ml-auto" type="submit">Add Burger</button>
+    </form>        
+
+    </div>
+
+		<div class="col-4">
+			<h3>Taken by Someone</h3>
+			{{#each burger}}
+			{{#if this.devoured}}
+			<div class="card m-1">
+				<div class="card-body p-2">
+				<p class="text-secondary">{{this.burger_name}}</p>
+                <p>{{this.burger_details}}</p>
+					<button class="returnButton d-flex ml-auto" data-id="{{this.id}}" class="returnButton">Return</button>
+				</div>
+			</div>
+			{{/if}}
+			{{/each}}
+		</div>
+
+
+</div>
+
+</div>
+
+

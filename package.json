@@ -1,0 +1,26 @@
+{
+  "name": "eattherburger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a1718367/Eattheburger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a1718367/Eattheburger/issues"
+  },
+  "homepage": "https://github.com/a1718367/Eattheburger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "util": "^0.12.3"
+  }
+}
