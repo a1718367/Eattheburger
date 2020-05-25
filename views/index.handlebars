@@ -6,7 +6,7 @@
 <div class="row mt-3 mx-2">
 
 
-    <div class="col-4">
+    <div class="col-sm-4 mt-2">
         <h2 id="offer">On Offer</h2>
         {{#each burger}}
 		{{#unless this.devoured}}
@@ -21,7 +21,7 @@
 			{{/each}}
     </div>
 
-    <div class="col-4" id="add">
+    <div class="col-sm-4 mt-2" id="add">
     <h2>Add Burger</h2>
 
     <form class="m-1"id="newBurger">
@@ -35,7 +35,7 @@
 
     </div>
 
-		<div class="col-4">
+		<div class="col-sm-4 mt-2">
 			<h2>Taken by Someone</h2>
 			{{#each burger}}
 			{{#if this.devoured}}
